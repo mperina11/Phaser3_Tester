@@ -1,5 +1,5 @@
-var config = {
-    type: Phaser.AUTO,
+let config = {
+    type: Phaser.CANVAS,
     width: 800,
     height: 600,
     backgroundColor: '#1b1464',
@@ -7,9 +7,13 @@ var config = {
     physics: {
         default: 'matter',
         matter: {
+            debug: true,
+            showVelocity: true, // velocity not showing currently
+            // velocityColor: #de42d6,
+            showCollisions: true
         }
     },
     scene: [Play]
 };
 
-var game = new Phaser.Game(config);
+let game = new Phaser.Game(config);
